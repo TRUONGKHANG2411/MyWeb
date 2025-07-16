@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký ứng viên</title>
+    <link rel="stylesheet" href="../css/css02.css">
+</head>
+<body>
+    <table>
+        <caption>CÁC SỰ KIỆN TRONG 12/2025</caption>
+        <tr>
+            <th>SỰ KIỆN</th>
+            <th>ĐỊA ĐIỂM</th>
+            <th>THỜI GIAN</th>
+        </tr>
+        <tr>
+            <td>Hội thi tay nghề điêu khắc</td>
+            <td>Tây Ninh</td>
+            <td>01-04 tháng 12/2015</td>
+        </tr>
+        <tr>
+            <td>Triển lãm tranh sơn mài</td>
+            <td>Bình Dương</td>
+            <td>10-15 tháng 12/2015</td>
+        </tr>
+        <tr>
+            <td>Hội thi bánh dân gian Nam Bộ</td>
+            <td>Vĩnh Long</td>
+            <td>17-20 tháng 12/2015</td>
+        </tr>
+        <tr>
+            <td>Hội thi văn nghệ quần chúng</td>
+            <td>Hà Nội</td>
+            <td>25-30 tháng 12/2015</td>
+        </tr>
+    </table>
+
+    <div class="container">
+        <h1>Đăng ký Tham gia Sự kiện</h1>
+        <form>
+            <label for="name">Họ và Tên</label>
+            <input type="text" id="name" name="name" required>
+    
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+    
+            <label for="phone">Số điện thoại</label>
+            <input type="tel" id="phone" name="phone" required>
+    
+            <label for="event">Chọn sự kiện</label>
+            <select id="event" name="event" required>
+                <option value="">--- Chọn sự kiện ---</option>
+                <option value="tech">Hội thi tay nghề điêu khắc</option>
+                <option value="startup">Triển lãm tranh sơn mài</option>
+                <option value="design">Hội thi bánh dân gian Nam Bộ</option>
+                <option value="design">Hội thi văn nghệ quần chúng</option>
+            </select>
+    
+            <label for="message">Ghi chú thêm</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+    
+            <button type="submit">Đăng ký ngay</button>
+        </form>
+    </div>
+    
+</body>
+</html>

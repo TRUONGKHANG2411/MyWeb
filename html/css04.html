@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Bài 4</title>
+    <style>
+        .banner {
+            height: 100px;
+            text-align: center;
+            font-weight: 700;
+            line-height: 100px;
+            text-shadow: 3px 3px 2px gray;
+            animation: change_background 5s infinite;
+        }
+
+        .frame {
+            margin: 0px auto;
+            width: 80%;
+            height: 300px;
+        }
+
+        .frame div {
+            float: left;
+            width: 200px;
+            height: 200px;
+            margin: 50px;
+            background-color: aqua;
+            font-size: 3em;
+            text-align: center;
+            line-height: 200px;
+            color: yellow;
+        }
+
+        .slider {
+            animation: scroll 10s infinite;
+            border: 5px solid red;
+        }
+
+        .round1 {
+            border: 5px dashed blue;
+            border-radius: 0px 30px;
+        }
+
+        .round2 {
+            border: 5px dotted magenta;
+            border-radius: 30px 0px;
+        }
+
+        .rotate {
+            background: teal;
+            animation: rotate 10s infinite;
+            font-size: 1.5em;
+            border: 2px double yellow;
+        }
+
+        @keyframes change_background {
+            0% {
+                background-color: #ff0000;
+                font-size: 1em;
+            }
+            8.33% {
+                background-color: #ff8000;
+                font-size: 1.2em;
+            }
+            16.667% {
+                background-color: #ffff00;
+                font-size: 1.4em;
+            }
+            25% {
+                background-color: #00c3f8;
+                font-size: 1.6em;
+            }
+            33.333% {
+                background-color: #00ff00;
+                font-size: 1.8em;
+            }
+            41.667% {
+                background-color: #00ff80;
+                font-size: 2em;
+            }
+            50% {
+                background-color: #00ffff;
+                font-size: 2.2em;
+            }
+            58.333% {
+                background-color: #00ff80;
+                font-size: 2em;
+            }
+            66.667% {
+                background-color: #00ff00;
+                font-size: 1.8em;
+            }
+            75% {
+                background-color: #00c3f8;
+                font-size: 1.6em;
+            }
+            83.333% {
+                background-color: #ffff00;
+                font-size: 1.4em;
+            }
+            91.667% {
+                background-color: #ff8000;
+                font-size: 1.2em;
+            }
+            100% {
+                background-color: #ff0000;
+                font-size: 1em;
+            }
+        }
+
+        @keyframes scroll {
+            0% {
+                background-image: url(../images/1.jpg);
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+            }
+            20% {
+                background-image: url(../images/2.jpg);
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+            }
+            40% {
+                background-image: url(../images/3.jpg);
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+            }
+            60% {
+                background-image: url(../images/4.jpg);
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+            }
+            80% {
+                background-image: url(../images/5.jpg);
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+            }
+            100% {
+                background-image: url(../images/6.jpg);
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+            }
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(20deg);
+            }
+            12% {
+                transform: rotate(40deg);
+            }
+            24% {
+                transform: rotate(60deg);
+            }
+            36% {
+                transform: rotate(80deg);
+            }
+            48% {
+                transform: rotate(100deg);
+            }
+            60% {
+                transform: rotate(120deg);
+            }
+            72% {
+                transform: rotate(140deg);
+            }
+            84% {
+                transform: rotate(160deg);
+            }
+            100% {
+                transform: rotate(180deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">BANNER </div>
+    <div class="frame">
+        <div class="slider">1</div>
+        <div class="round1">2</div>
+        <div class="round2"> 3</div>
+        <div class="rotate">Rotate </div>
+    </div>
+
+</body>
+</html>
