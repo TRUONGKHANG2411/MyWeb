@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    background-color: #141414;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2em;
+    background-color: rgb(0, 0, 0, 0.8);
+    position: sticky;
+    top: 100;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #e50914;
+}
+
+.nav-links a {
+    color: white;
+    margin-left: 1em;
+    text-decoration: none;
+}
+
+.banner {
+    background: url(../images/movies/movie-banner.jpg) no-repeat center/cover;
+    height: 200px;
+    display: flex;
+    align-items: flex-end;
+    padding: 2em;
+    box-shadow: inset 0 -100px 200px#141414;
+}
+
+.banner h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.section {
+    padding: 2em;
+}
+
+.row {
+    display: flex;
+    overflow-x: auto;
+    gap: 1em;
+    /*khoảng cách giữa các hàng. cột*/
+}
+
+.movie {
+    width: 200px;
+    height: 300px;
+    background: gray;
+    border-radius: 5px;
+    background-size: cover;
+    background-position: center;
+}
+
+.movie:hover {
+    transform: scale(1.05);
+    transition: transform 0.35;
+}
