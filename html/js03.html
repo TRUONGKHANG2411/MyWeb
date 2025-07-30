@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>String Statistic</title>
+    <style>
+        .container {
+            border: 1px solid blue;
+            width: 300px;
+            margin: 40px auto;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        h3 {
+            text-align: center;
+        }
+
+        #result {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h3>String Statistic</h3>
+        <label>String:
+            <input type="text" id="inputString" style="width: 100%;" />
+        </label><br><br>
+        <button onclick="analyzeString()">Statistic</button>
+
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function analyzeString() {
+            const str = document.getElementById("inputString").value;
+            const resultDiv = document.getElementById("result");
+            resultDiv.innerHTML = ""; // Xóa kết quả cũ
+
+            // Tổng số ký tự
+            const totalChars = str.length;
+
+            // Tách từ bằng khoảng trắng
+            const words = str.trim().split(/\s+/);
+            const totalWords = str.trim() === "" ? 0 : words.length;
+
+            // Thống kê từng ký tự
+            const charMap = {};
+            for (let ch of str) {
+                if (ch === ' ') continue; // Bỏ qua dấu cách
+                ch = ch.toUpperCase(); // Không phân biệt chữ hoa thường
+                if (charMap[ch]) {
+                    charMap[ch]++;
+                } else {
+                    charMap[ch] = 1;
+                }
+            }
+
+            // Hiển thị kết quả
+            resultDiv.innerHTML += `Characters: ${totalChars}<br>`;
+            resultDiv.innerHTML += `Words: ${totalWords}<br>`;
+
+            const sortedKeys = Object.keys(charMap).sort(); // Sắp xếp theo bảng chữ cái
+            for (let key of sortedKeys) {
+                resultDiv.innerHTML += `Character '${key}': ${charMap[key]}<br>`;
+            }
+        }
+    </script>
+
+</body>
+
+</html>
