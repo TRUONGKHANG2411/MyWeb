@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/js02.js"></script>
+    <title>Xem ngay va gio</title>
+
+</head>
+
+<body>
+    <h3 id="days"></h3>
+    <h3 id="date"></h3>
+    <h3 id="time"></h3>
+    <button onclick="showDate()">Xem ngay gio</button>
+
+    <script>
+        var month = Number(prompt("Nhap thang"));
+        var year = Number(prompt("Nhap nam", 2000));
+        var days = calculateDay(month, year);
+        document.getElementById("days").innerHTML = "Thang " + month + " nam " + year + " co " + days + " ngay ";
+    </script>
+</body>
+
+
+</html>

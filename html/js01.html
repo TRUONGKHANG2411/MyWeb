@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Bảng Cửu Chương</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        table {
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+
+        td {
+            border: 1px solid #000;
+            padding: 10px;
+            vertical-align: top;
+            text-align: left;
+            width: 150px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>BẢNG CỬU CHƯƠNG</h2>
+    <table id="bangCuuChuong"></table>
+
+    <script>
+        const table = document.getElementById("bangCuuChuong");
+        let count = 2;
+
+        for (let row = 1; row <= 2; row++) {
+            const tr = document.createElement("tr");
+
+            for (let col = 1; col <= 4; col++) {
+                const td = document.createElement("td");
+                let content = "";
+
+                for (let i = 1; i <= 9; i++) {
+                    content += `${count} x ${i} = ${count * i}<br>`;
+                }
+
+                td.innerHTML = content;
+                tr.appendChild(td);
+                count++;
+            }
+
+            table.appendChild(tr);
+        }
+    </script>
+</body>
+
+</html>
