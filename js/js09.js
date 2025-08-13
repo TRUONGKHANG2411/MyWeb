@@ -56,8 +56,8 @@ experienceList.addEventListener('click', (e) => {
                 if (next && next.tagName === 'DD') {
                     next.remove();
                 }
+                e.target.remove();
             }
         }
-        e.target.remove();
     }
 });
