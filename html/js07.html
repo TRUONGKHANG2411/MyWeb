@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>js07-FORM ĐĂNG KÝ</title>
+    <style>
+        form{
+            width: 50%;
+            margin: 0px auto;
+        }
+    </style>
+    <script>
+        function DangKy() {
+            var ten = document.forms.reg["txtTen"].value;
+            var mk = document.forms.reg["txtPass"].value;
+            var ns = document.forms.reg["txtNgaysinh"].value;
+            // console.log(ns);
+            var gt = document.forms.reg["gt"].value;
+            var qt = document.forms.reg["qt"].value;
+            document.forms.reg["thongtin"].value = "Chào mừng " + ten +
+                "\nBạn là " + gt + "\nMật khẩu của bạn có " + mk.length + " kí tự \n" +
+                "bạn sinh ngày " + ns + "\nVấn đề bạn quan tâm là: " + qt;
+            return false;
+        }
+
+    </script>
+</head>
+
+<body>
+    <form id="reg" onSubmit="return DangKy()">
+        <h1>ĐĂNG KÝ THÀNH VIÊN</h1>
+        <p>
+            <label>Tên đăng nhập</label>
+            <input type="text" name="txtTen" required />
+        </p>
+        <p>
+            <label>Mật khẩu</label>
+            <input type="password" name="txtPass" required />
+        </p>
+        <p>
+            <label>Ngày sinh</label>
+            <input type="date" name="txtNgaysinh" required />
+        </p>
+        <p>
+            <label>Giới tính</label>
+            <input type="radio" name="gt" value="Nam" checked>Nam
+            <input type="radio" name="gt" value="Nữ">Nữ
+        </p>
+        <p>
+            <label>Vấn đề bạn quan tâm</label>
+            <select name="qt">
+                <option value="Kinh tế">Kinh tế</option>
+                <option value="Thể thao">Thể thao</option>
+                <option value="Văn học nghệ thuật">Văn học nghệ thuật</option>
+            </select>
+        </p>
+        <p>
+            <input type="submit" value="Đăng ký" />
+            <input type="reset" value="Hủy" />
+        </p>
+        <p>
+            <textarea name="thongtin" rows="6" cols="50"></textarea>
+        </p>
+    </form>
+</body>
+
+</html>

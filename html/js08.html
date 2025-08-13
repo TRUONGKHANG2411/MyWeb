@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+div#diVText{
+    width:300px;
+    height:200px;
+    background-color: #ff0000;
+    color: #ffff00;
+    text-align:center;
+}
+</style>
+<script>
+function changeColor()
+{
+    var bkcolor = document.getElementById("bkcolor").value;
+    var textcolor =document.getElementById("textcolor").value;
+    //console.log(bkcolor)
+    document.getElementById("title").innerHTML=document.getElementById("txtInput").value
+    document.getElementById("diVText").style.backgroundColor= bkcolor ;
+    document.getElementById("diVText").style.color= textcolor ;
+}
+</script>
+</head>
+<body>
+    <div id="diVText">
+        <h1 id="title">WELCOME HTML5!</h1>
+    </div>
+    <p>Nhập nội dung:
+        <input type="text" id="txtInput" autofocus value="WELCOME HTML5!" size="50" />
+    </p>
+    <p>
+        Màu nền:<input type="color" id="bkcolor" value="#ff0000">
+    </p>
+    <p>
+        Màu chữ:<input type="color" id="textcolor" value="#ffff00">
+    </p>
+    <input type="button" onClick="changeColor()" value="Thực hiện" />
+</body>
+</html>
