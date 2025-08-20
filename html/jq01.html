@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Jquery 01-insert list</title>
+</head>
+
+<body>
+    <script>
+        function insert() {
+            var mh = $("#textMonHoc").val();
+            if (mh != "") {
+                var str = "<li>" + mh + "</li>";
+                $("ul").append(str);//thêm chuỗi str vào cuối nội dung trong <ul>
+            }
+            $("#textMonHoc").val("");//làm rỗng textbox
+        }
+
+        $(document).ready(function () {
+            $("button").click(function () {
+                insert();
+            })
+            $("input").change(function () {
+                insert();
+            })
+        })
+    </script>
+    <p>
+        <input type="text" id="textMonHoc" />
+    </p>
+    <ul>
+        <li>Python</li>
+        <li>PHP</li>
+    </ul>
+    <p>
+        <button>Thêm môn học</button>
+    </p>
+</body>
+
+</html>
